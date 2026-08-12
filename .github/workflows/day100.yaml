@@ -1,26 +1,20 @@
-    name: file operation in Github
+name: file operation in Github
 
-    on: push
+on: push   # 👈 space compulsory
 
+jobs:
+  files:
+    runs-on: ubuntu-latest
 
-    jobs:
-     files:
-
-     runs-on:ubuntu-latest
-     steps:
+    steps:
       - name: create a one file
-        run: echo "KK DEVOPS 12345" >devops.txt
-
+        run: echo "KK DEVOPS 12345" > devops.txt
 
       - name: display the content of the file
         run: cat devops.txt
 
-       - name: display the date
-         run: date
+      - name: display the date
+        run: date
 
-        - name: Display the file and dir
-          run: ls -lrth
-
-
-        - name: display the present location
-          run: pwd
+      - name: Display the file and dir
+        run: ls -lrth
