@@ -1,0 +1,17 @@
+name: jobs exection testing
+
+on:  
+ workflow-dispatch:
+
+ jobs:
+ job1:
+  steps:
+   runs-on: ubuntu-latest
+   steps:
+     - name: job1 stop
+       run: echo "This is job1 running"
+   job2:
+    runs-on: ubuntur-latest
+    steps:
+     - name: job2 step
+       runs: echo "This is Job2 running"
