@@ -1,6 +1,6 @@
     name: file operation in Github
 
-    on:push
+    on: push
 
 
     jobs:
