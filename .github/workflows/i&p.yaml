@@ -11,7 +11,7 @@ jobs:
         run: echo "Data file" > data.txt
 
       - name: Upload file as artifact
-        uses: actions/upload-artifact@v4
+        uses: uses: actions/upload-artifact@v4
         with:
           name: datafile
           path: data.txt
