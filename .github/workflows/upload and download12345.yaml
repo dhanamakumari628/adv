@@ -1,7 +1,7 @@
 name: Upload and Download Artifact
 
 on:
-  push:
+  workflow_dispatch
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
       run: echo "Hello Vijay" > sample.txt
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: my-artifact
         path: sample.txt
