@@ -1,0 +1,24 @@
+name: Artifact upload and download example
+
+on : workflow_dispatch
+jobs:
+ job1:
+  runs-on: ubutu-latest
+  steps:
+   - name: create file
+     run: echo "Data file">data.txt
+    - name: upload file as artifactory
+      uses: action/upload-artifact@v4
+      with
+      name: datafile
+      path: data.txt
+job2:
+ runs-on: ubutu-latest
+  needs: job1
+   steps:
+    - name: download artifact fiel
+      uses: actions/download-artifact@v4
+      with:
+     name: datafile
+     -name: show file context
+        run: Cat data.txt
