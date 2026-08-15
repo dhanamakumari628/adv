@@ -1,0 +1,18 @@
+name: Variables Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    env:
+      NAME: Vijay
+      CITY: Guntur
+
+    steps:
+      - name: Display variables
+        run: |
+          echo "My name is $NAME"
+          echo "My city is $CITY"
