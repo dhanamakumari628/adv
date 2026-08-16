@@ -1,0 +1,20 @@
+name: Repo Variables and Secrets Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Show repository variable
+        run: echo "Company is ${{ vars.COMPANY }}"
+
+      - name: Use secret key
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          echo "Secret key received"
+          echo "API_KEY is $API_KEY"
